@@ -10,7 +10,8 @@ exports.get = (req, res) => {
 //Crie uma rota GET que retorne uma lista de filmes de um diretor específico
 exports.getByDiretor = (req, res) => {
     const director = req.params.director
-    const diretor = filmes.filter(item => item.director == director)// trocar para filter
+    console.log(req.url)
+    const diretor = filmes.filter(item => item.director == director)// filter nao esta funcionando
 
     res.status(200).send(diretor)
 }
